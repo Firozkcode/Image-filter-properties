@@ -1,0 +1,126 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: skyblue;
+}
+
+
+
+.frame {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  translate: 0 6px;
+}
+
+.frame header {
+  top: -46px;
+  margin-bottom: 10px;
+}
+
+.frame h2{
+  font-size: 32px;
+  text-align: center;
+}
+
+.frame h1{
+  font-size: 24px;
+  text-align: center;
+}
+
+.frame.rows h3 {
+  /* bottom: -26px; */
+  text-align: center;
+  margin-top: 10px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  /* padding-top: 82px; */
+  background: black;
+  /* width: 160px; */
+  gap: 5px;
+}
+
+.wrapper img {
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  object-fit: cover;
+  transition: filter 0.4s;
+}
+
+.wrapper .image-wrapper {
+  /* position: absolute;
+  top: -6px;
+  left: 50%;
+  translate: -50% 0;
+  right: 0; */
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.wrapper div {
+  padding: 5px 16px;
+  border-radius: 4px;
+  color: rgb(255 255 255 / 96%);
+  font-size: 16px;
+  text-align: center;
+  background: rgb(255 255 255 / 11%);
+  opacity: 0.65;
+  transition: 0.5s;
+}
+
+.wrapper div:hover {
+  opacity: 1;
+  background: rgb(255 255 255 / 14%);
+}
+
+.opacity:hover ~ .image-wrapper img {
+  filter: opacity(0.5);
+}
+
+
+.invert:hover ~ .image-wrapper img {
+  filter: invert(100%);
+}
+
+.contrast:hover ~ .image-wrapper img {
+  filter: contrast(1.25);
+}
+
+.greyscale:hover ~ .image-wrapper img {
+  filter: grayscale(0.75);
+}
+
+.brightness:hover ~ .image-wrapper img {
+  filter: brightness(1.25);
+}
+
+.blur:hover ~ .image-wrapper img {
+  filter: blur(4px);
+}
+
+.sepia:hover ~ .image-wrapper img {
+  filter: sepia(0.5);
+}
+
+.hue-rotate:hover ~ .image-wrapper img {
+  filter: hue-rotate(90deg);
+}
+
+.saturate:hover ~ .image-wrapper img {
+  filter: saturate(3);
+}
